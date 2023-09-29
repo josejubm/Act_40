@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <!-- Encabezado -->
+    <TextView
+        android:id="@+id/tvHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="El Mayor de 3 Cantidades"
+        android:textSize="24sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"  />
+
+    <!-- Campos de entrada -->
+    <LinearLayout
+        android:id="@+id/inputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvHeader"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/etN1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Número 1"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/etN2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Número 2"
+            android:inputType="number"
+            android:layout_marginTop="16dp" />
+
+        <EditText
+            android:id="@+id/etN3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Número 3"
+            android:inputType="number"
+            android:layout_marginTop="16dp" />
+    </LinearLayout>
+
+    <!-- Botones -->
+    <LinearLayout
+        android:id="@+id/buttonLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/inputLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp">
+
+        <Button
+            android:id="@+id/btnCalcular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Calcular"
+            android:backgroundTint="@android:color/holo_green_light"
+            />
+
+        <Button
+            android:id="@+id/btnLimpiar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Limpiar"
+            android:layout_marginStart="16dp"
+            android:backgroundTint="@android:color/holo_red_light"/>
+    </LinearLayout>
+
+    <!-- Resultado -->
+    <TextView
+        android:id="@+id/tvMayor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="El Número Mayor Es: "
+        android:textSize="18sp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/buttonLayout"
+        android:layout_marginTop="16dp"
+        android:visibility="gone" />
+
+    <!-- Pie de página -->
+    <TextView
+        android:id="@+id/tvFooter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="© 2023 José Manuel Bautista"
+        android:textSize="12sp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="16dp" />
+
+</RelativeLayout>
